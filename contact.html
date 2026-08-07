@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — GDABVI | Life Beyond Sight</title>
+<meta name="description" content="Contact GDABVI: 26777 Central Park Blvd., Suite 150, Southfield, MI 48076. Phone 313-272-3900. Open Monday–Friday 8:00 AM–4:30 PM.">
+<link rel="icon" href="images/gdabvi-logo-square.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <span class="bar-label">♿ Accessibility tools</span>
+  <button class="a11y-btn" id="btnListen" aria-pressed="false" title="Read this page aloud">🔊 Listen to this page</button>
+  <button class="a11y-btn" id="btnPause" hidden aria-pressed="false">⏸ Pause</button>
+  <button class="a11y-btn" id="btnStop" hidden>⏹ Stop</button>
+  <button class="a11y-btn" id="fontDown" title="Decrease text size" aria-label="Decrease text size">A−</button>
+  <button class="a11y-btn" id="fontReset" title="Reset text size" aria-label="Reset text size">A</button>
+  <button class="a11y-btn" id="fontUp" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="a11y-btn" id="btnContrast" aria-pressed="false" title="Toggle high contrast colors">◐ High contrast</button>
+  <span id="ttsStatus" role="status" aria-live="polite"></span>
+</div>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="logo-link" href="index.html" aria-label="GDABVI home">
+      <img src="images/gdabvi-logo-wide.png" alt="GDABVI logo: Greater Detroit Agency for the Blind and Visually Impaired">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav class="main" id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="donate-cta" href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">♥ Donate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+
+  <section aria-labelledby="contact-h1">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="chip">We're ready to help</span>
+          <h1 id="contact-h1">Contact Us</h1>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <p>Do you need assistance? Looking to empower someone you know? Call, write, or visit — we're ready to help you get started.</p>
+      <div class="contact-panel">
+        <div class="info-box">
+          <p class="big">Greater Detroit Agency for the Blind &amp; Visually Impaired</p>
+          <p>📍 26777 Central Park Blvd., Suite 150<br>Southfield, MI 48076</p>
+          <p>📞 Phone: <a href="tel:3132723900">313-272-3900</a></p>
+          <p>✉️ Email: <a href="mailto:info@gdabvi.org">info@gdabvi.org</a></p>
+          <p>🕗 Hours: Monday–Friday, 8:00 AM–4:30 PM<br>Closed weekends and major holidays.</p>
+          <p>🚌 Our office is reachable by both MetroLift and SMART paratransit.</p>
+          <p style="margin-top:1rem"><strong>Connect with us:</strong></p>
+          <ul style="list-style:none;margin-left:0">
+            <li><a href="https://www.facebook.com/GDABVI/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.youtube.com/channel/UCuiVk6wvpE23a5HtmE5VqIQ" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://twitter.com/gdabvi" target="_blank" rel="noopener">X (Twitter)</a></li>
+            <li><a href="https://www.linkedin.com/company/gdabvi/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <form class="contact" id="contactForm" aria-label="Contact form">
+          <h2 style="font-size:1.3rem">Send us a message</h2>
+          <label for="cf-first">First name</label>
+          <input id="cf-first" name="first" type="text" autocomplete="given-name">
+          <label for="cf-last">Last name</label>
+          <input id="cf-last" name="last" type="text" autocomplete="family-name">
+          <label for="cf-email">Email <span class="req" aria-hidden="true">*</span><span style="position:absolute;left:-9999px">(required)</span></label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email">
+          <label for="cf-phone">Phone number</label>
+          <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+          <label for="cf-msg">How can we help?</label>
+          <textarea id="cf-msg" name="message" rows="5"></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p style="font-size:.9rem;margin-top:.8rem;color:var(--brown-soft)">Submitting opens a pre-filled email in your mail app addressed to our office. Prefer to talk? Call <a href="tel:3132723900">313-272-3900</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img src="images/gdabvi-logo-wide.png" alt="" style="max-width:270px;margin-bottom:.8rem">
+      <p class="foot-tag">Life Beyond Sight.</p>
+      <p>Power Over Eye Health &amp; Vision Loss™</p>
+      <p>Serving Wayne, Oakland, Macomb, Livingston, Washtenaw, Monroe &amp; St. Clair Counties.</p>
+    </div>
+    <div>
+      <h3>Visit or call</h3>
+      <p>26777 Central Park Blvd., Suite 150<br>Southfield, MI 48076</p>
+      <p>Phone: <a href="tel:3132723900">313-272-3900</a><br>
+      Email: <a href="mailto:info@gdabvi.org">info@gdabvi.org</a></p>
+      <p>Mon–Fri, 8:00 AM–4:30 PM</p>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources for Basic Needs</a></li>
+        <li><a href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">Donate</a></li>
+        <li><a href="get-involved.html">Volunteer &amp; Sponsor</a></li>
+        <li><a href="https://www.guidestar.org/profile/38-1683860" target="_blank" rel="noopener">Financial Transparency</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <p>© 2026 GDABVI — All Rights Reserved. A 501(c)(3) Nonprofit · EIN 38-1683860.</p>
+    <p>The information on this site is not to be construed as medical advice. Please consult your eye specialist or health provider regarding your specific condition.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

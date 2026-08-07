@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — GDABVI | Life Beyond Sight</title>
+<meta name="description" content="Free services for blind and visually impaired people: daily living skills, orientation & mobility, technology training, support groups, case management, and paratransit help.">
+<link rel="icon" href="images/gdabvi-logo-square.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <span class="bar-label">♿ Accessibility tools</span>
+  <button class="a11y-btn" id="btnListen" aria-pressed="false" title="Read this page aloud">🔊 Listen to this page</button>
+  <button class="a11y-btn" id="btnPause" hidden aria-pressed="false">⏸ Pause</button>
+  <button class="a11y-btn" id="btnStop" hidden>⏹ Stop</button>
+  <button class="a11y-btn" id="fontDown" title="Decrease text size" aria-label="Decrease text size">A−</button>
+  <button class="a11y-btn" id="fontReset" title="Reset text size" aria-label="Reset text size">A</button>
+  <button class="a11y-btn" id="fontUp" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="a11y-btn" id="btnContrast" aria-pressed="false" title="Toggle high contrast colors">◐ High contrast</button>
+  <span id="ttsStatus" role="status" aria-live="polite"></span>
+</div>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="logo-link" href="index.html" aria-label="GDABVI home">
+      <img src="images/gdabvi-logo-wide.png" alt="GDABVI logo: Greater Detroit Agency for the Blind and Visually Impaired">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav class="main" id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="donate-cta" href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">♥ Donate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+
+  <section aria-labelledby="services-h1">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="chip">Always free of charge</span>
+          <h1 id="services-h1">Our Services</h1>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <p style="max-width:75ch">Every GDABVI service is provided <strong>free of charge</strong> and is available online, onsite, in-home, or virtually. Our whole-person approach helps people adapt to life with vision loss — practically, socially, and emotionally. This is what Life Beyond Sight looks like in practice.</p>
+
+      <div class="svc-row">
+        <div class="svc-img"><img src="images/braille-training.jpg" alt="Fingers reading a yellow braille sign on a glass door."></div>
+        <div>
+          <span class="chip warm">Skills for every day</span>
+          <h3>Daily Living Skills</h3>
+          <p>Practical training for cooking, organizing, labeling, personal care, and managing a household confidently without sight.</p>
+        </div>
+      </div>
+      <div class="svc-row flip">
+        <div class="svc-img"><img src="images/support-group.jpg" alt="A group of people sitting in a circle, talking and supporting one another."></div>
+        <div>
+          <span class="chip warm">You are not alone</span>
+          <h3>Support Groups &amp; Social Activities</h3>
+          <p>The New Direction Support Group meets Tuesdays 12:00–2:00 PM, and monthly social activities connect you with people who understand the journey.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-img"><img src="images/community-meeting.jpg" alt="Community members gathered at a meeting, listening to a presenter."></div>
+        <div>
+          <span class="chip warm">A guide through the system</span>
+          <h3>Case Management</h3>
+          <p>One-on-one help navigating basic needs, benefits, referrals, and the resources that keep life moving forward.</p>
+        </div>
+      </div>
+      <div class="svc-row flip">
+        <div class="svc-img"><img src="images/mobility-ramp.jpg" alt="A person using a white cane on an accessible outdoor ramp."></div>
+        <div>
+          <span class="chip warm">Travel with confidence</span>
+          <h3>Orientation &amp; Mobility</h3>
+          <p>Learn to travel safely and independently — indoors, outdoors, and on public transit — with a trained O&amp;M specialist.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-img"><img src="images/eye-exam.jpg" alt="An eye doctor examines a patient with clinical equipment."></div>
+        <div>
+          <span class="chip warm">Knowledge that protects sight</span>
+          <h3>Eye Health Education</h3>
+          <p>Our Education Series covers eye conditions, prevention, treatment, healthy living, and safety — with low vision device guidance.</p>
+        </div>
+      </div>
+      <div class="svc-row flip">
+        <div class="svc-img"><img src="images/donate-key.jpg" alt="A computer keyboard with a highlighted key symbolizing giving."></div>
+        <div>
+          <span class="chip warm">Technology opens doors</span>
+          <h3>Technology Training &amp; Learning Lab</h3>
+          <p>JAWS-equipped PCs, screen reader training, and open Learning Lab hours every Tuesday and Friday, 10:00 AM–2:00 PM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wash-blue" aria-labelledby="services-transit-h">
+    <div class="wrap narrow">
+      <div class="section-head">
+        <div>
+          <span class="chip warm">Getting around</span>
+          <h2 id="services-transit-h">Paratransit assistance</h2>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <p>Reliable transportation matters. Our Orientation &amp; Mobility Specialists help clients obtain and renew <strong>MetroLift</strong> and <strong>SMART</strong> paratransit service.</p>
+      <div class="notice warm">
+        <strong>Good to know:</strong> the approval process can take up to 21 days. For renewals, call us 30–45 days before your expiration date so we can complete your application on time. Our office is reachable by both MetroLift and SMART.
+      </div>
+      <p><a href="tel:3132723900">Call 313-272-3900</a> and ask for paratransit assistance.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="services-start-h">
+    <div class="wrap narrow">
+      <div class="section-head">
+        <div>
+          <span class="chip">Simple to begin</span>
+          <h2 id="services-start-h">How to get started</h2>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <ol class="steps">
+        <li><span class="stepnum" aria-hidden="true">1</span><strong>Choose how you'd like to meet.</strong> We provide virtual, on-site, and in-home services.</li>
+        <li><span class="stepnum" aria-hidden="true">2</span><strong>Complete our accessible intake.</strong> You'll be contacted after we receive your forms.</li>
+        <li><span class="stepnum" aria-hidden="true">3</span><strong>Book your appointment.</strong> Appointments are required for in-person services — reserve online or call <a href="tel:3132723900">313-272-3900</a>.</li>
+        <li><span class="stepnum" aria-hidden="true">4</span><strong>Prefer to talk it through?</strong> Call the office for guidance and assistance. Virtual classes and support need only a landline or cell phone.</li>
+        <li><span class="stepnum" aria-hidden="true">5</span><strong>Join in.</strong> An RSVP is required for special activities — then you're part of the community.</li>
+      </ol>
+      <div class="btn-row">
+        <a class="btn primary" href="contact.html">Contact Us to Begin</a>
+        <a class="btn blue" href="tel:3132723900">📞 313-272-3900</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img src="images/gdabvi-logo-wide.png" alt="" style="max-width:270px;margin-bottom:.8rem">
+      <p class="foot-tag">Life Beyond Sight.</p>
+      <p>Power Over Eye Health &amp; Vision Loss™</p>
+      <p>Serving Wayne, Oakland, Macomb, Livingston, Washtenaw, Monroe &amp; St. Clair Counties.</p>
+    </div>
+    <div>
+      <h3>Visit or call</h3>
+      <p>26777 Central Park Blvd., Suite 150<br>Southfield, MI 48076</p>
+      <p>Phone: <a href="tel:3132723900">313-272-3900</a><br>
+      Email: <a href="mailto:info@gdabvi.org">info@gdabvi.org</a></p>
+      <p>Mon–Fri, 8:00 AM–4:30 PM</p>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources for Basic Needs</a></li>
+        <li><a href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">Donate</a></li>
+        <li><a href="get-involved.html">Volunteer &amp; Sponsor</a></li>
+        <li><a href="https://www.guidestar.org/profile/38-1683860" target="_blank" rel="noopener">Financial Transparency</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <p>© 2026 GDABVI — All Rights Reserved. A 501(c)(3) Nonprofit · EIN 38-1683860.</p>
+    <p>The information on this site is not to be construed as medical advice. Please consult your eye specialist or health provider regarding your specific condition.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

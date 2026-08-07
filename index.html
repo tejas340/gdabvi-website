@@ -1,17 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Greater Detroit Agency for the Blind and Visually Impaired helps blind and visually impaired people live independent lives with confidence and dignity."
-    />
-    <title>GDABVI | Life Beyond Sight</title>
-    <script type="module" crossorigin src="./assets/index-BLLdKaLo.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Du0Cpmyk.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — GDABVI | Life Beyond Sight</title>
+<meta name="description" content="The Greater Detroit Agency for the Blind & Visually Impaired helps blind and visually impaired people across Southeast Michigan live productive, independent lives. Life Beyond Sight.">
+<link rel="icon" href="images/gdabvi-logo-square.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <span class="bar-label">♿ Accessibility tools</span>
+  <button class="a11y-btn" id="btnListen" aria-pressed="false" title="Read this page aloud">🔊 Listen to this page</button>
+  <button class="a11y-btn" id="btnPause" hidden aria-pressed="false">⏸ Pause</button>
+  <button class="a11y-btn" id="btnStop" hidden>⏹ Stop</button>
+  <button class="a11y-btn" id="fontDown" title="Decrease text size" aria-label="Decrease text size">A−</button>
+  <button class="a11y-btn" id="fontReset" title="Reset text size" aria-label="Reset text size">A</button>
+  <button class="a11y-btn" id="fontUp" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="a11y-btn" id="btnContrast" aria-pressed="false" title="Toggle high contrast colors">◐ High contrast</button>
+  <span id="ttsStatus" role="status" aria-live="polite"></span>
+</div>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="logo-link" href="index.html" aria-label="GDABVI home">
+      <img src="images/gdabvi-logo-wide.png" alt="GDABVI logo: Greater Detroit Agency for the Blind and Visually Impaired">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav class="main" id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="donate-cta" href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">♥ Donate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+
+  <section class="hero" aria-labelledby="home-h1">
+    <div class="wrap">
+      <div>
+        <span class="chip">Greater Detroit Agency for the Blind &amp; Visually Impaired</span>
+        <h1 id="home-h1">There is Life Beyond Sight.</h1>
+        <p class="tagline">Power Over Eye Health &amp; Vision Loss™</p>
+        <p class="lead">Since 1961, GDABVI has helped blind and visually impaired people across Southeast Michigan live productive, independent lives with confidence and dignity — at no cost to the people we serve.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">♥ Donate Now</a>
+          <a class="btn blue" href="contact.html">Get Help Today</a>
+          <a class="btn ghost" href="services.html">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="images/braille-training.jpg" alt="A person reads a yellow braille sign mounted on a glass door, fingertips resting on the raised dots.">
+      </div>
+    </div>
+    <button class="speak-btn" data-speak="content" style="position:absolute;top:1.2rem;right:1.2rem">🔊 Listen</button>
+  </section>
+
+  <section class="wash-blue" aria-label="GDABVI at a glance" style="padding-top:3rem">
+    <div class="impact">
+      <div class="impact-inner">
+        <div class="impact-card"><div class="num">1961</div><div class="lbl">Serving Detroit since</div></div>
+        <div class="impact-card"><div class="num">7</div><div class="lbl">Southeast Michigan counties served</div></div>
+        <div class="impact-card"><div class="num">$0</div><div class="lbl">Cost to clients — every service is free</div></div>
+        <div class="impact-card"><div class="num">501(c)(3)</div><div class="lbl">Nonprofit — gifts are tax-deductible</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="home-services-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="chip warm">What we do</span>
+          <h2 id="home-services-h">How we help</h2>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <p>Our whole-person approach meets people wherever they are in their journey with vision loss.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="fnum" aria-hidden="true">1</div>
+          <div>
+            <h3>Independence Services</h3>
+            <p>Direct services that help individuals and their families adapt to life without sight in a sighted world — from daily living skills to orientation and mobility.</p>
+          </div>
+          <a class="more" href="services.html">See all services →</a>
+        </div>
+        <div class="feature-item">
+          <div class="fnum" aria-hidden="true">2</div>
+          <div>
+            <h3>Education</h3>
+            <p>Our Education Series covers vision-related health topics including eye conditions, prevention and treatment, healthy living, and safety.</p>
+          </div>
+          <a class="more" href="eye-health.html">Learn about eye health →</a>
+        </div>
+        <div class="feature-item">
+          <div class="fnum" aria-hidden="true">3</div>
+          <div>
+            <h3>Social Activities</h3>
+            <p>Find support through groups of people who can relate to your journey, at a variety of social activities every month.</p>
+          </div>
+          <a class="more" href="services.html">View activities →</a>
+        </div>
+        <div class="feature-item">
+          <div class="fnum" aria-hidden="true">4</div>
+          <div>
+            <h3>Eye Health</h3>
+            <p>While not all blindness is preventable, there are many ways to help preserve your eyesight. Learn about common conditions and prevention.</p>
+          </div>
+          <a class="more" href="eye-health.html">Explore conditions →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wash-sand" aria-labelledby="home-news-h">
+    <div class="wrap">
+      <div class="news-board">
+        <div class="board-intro">
+          <span class="chip">Happening now</span>
+          <h2 id="home-news-h">News &amp; Notes</h2>
+          <p>What's happening at the agency right now.</p>
+          <button class="speak-btn" data-speak-section>🔊 Listen to this section</button>
+        </div>
+        <div>
+          <div class="news-item">
+            <span class="tag">Newsletter</span>
+            <h3>Monthly Newsletter</h3>
+            <p>Catch up with the agency's work — current news, upcoming events, and more.</p>
+            <a href="https://visitor.constantcontact.com/manage/optin/ea?v=001hTSvaCrbOrj-fwZoDs5vEGvQlSquaxKSk2vYvCDI8X-TI2eva-4YNqfkCI9GB8QW7FhCGtZUGPBHq-j4U4AFY_mUaiuIDgky" target="_blank" rel="noopener">Sign up for the newsletter</a>
+          </div>
+          <div class="news-item">
+            <span class="tag">Transportation</span>
+            <h3>Paratransit Help</h3>
+            <p>We help clients obtain and renew MetroLift and SMART paratransit. Approval can take up to 21 days — call 30–45 days before your renewal date.</p>
+            <a href="tel:3132723900">Call 313-272-3900</a>
+          </div>
+          <div class="news-item">
+            <span class="tag">Every Tuesday · 12–2 PM</span>
+            <h3>New Direction Support Group</h3>
+            <p>If you or someone you know could use the support of others in varying stages of vision loss, join our next meeting.</p>
+            <a href="contact.html">RSVP through our office</a>
+          </div>
+          <div class="news-item">
+            <span class="tag">Tue &amp; Fri · 10 AM–2 PM</span>
+            <h3>Learning Lab is Open</h3>
+            <p>Practice computer skills on our JAWS-equipped PCs. Headphones available if you don't have your own.</p>
+            <a href="contact.html">Plan your visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="home-quotes-h">
+    <div class="wrap">
+      <div class="section-head" style="justify-content:center;text-align:center">
+        <div style="flex:1">
+          <span class="chip warm">Client voices</span>
+          <h2 id="home-quotes-h">What our clients say</h2>
+        </div>
+        <button class="speak-btn" data-speak-section>🔊 Listen</button>
+      </div>
+      <blockquote class="pullquote">
+        No better place for visually impaired persons to find help and also enjoy themselves in a secure environment.
+        <footer>— Michael G., client</footer>
+      </blockquote>
+      <blockquote class="pullquote echo">
+        A long-time gem for visually impaired residents of SE Michigan!
+        <footer>— Sylvia O., client</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="home-cta-h">
+    <div class="wrap">
+      <h2 id="home-cta-h">Do you need assistance? Looking to empower someone you know?</h2>
+      <p style="max-width:60ch">We provide virtual, on-site, and in-home services. All you need to get started is a phone call.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn primary" href="contact.html">Contact Us Today</a>
+        <a class="btn blue" href="tel:3132723900">📞 313-272-3900</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img src="images/gdabvi-logo-wide.png" alt="" style="max-width:270px;margin-bottom:.8rem">
+      <p class="foot-tag">Life Beyond Sight.</p>
+      <p>Power Over Eye Health &amp; Vision Loss™</p>
+      <p>Serving Wayne, Oakland, Macomb, Livingston, Washtenaw, Monroe &amp; St. Clair Counties.</p>
+    </div>
+    <div>
+      <h3>Visit or call</h3>
+      <p>26777 Central Park Blvd., Suite 150<br>Southfield, MI 48076</p>
+      <p>Phone: <a href="tel:3132723900">313-272-3900</a><br>
+      Email: <a href="mailto:info@gdabvi.org">info@gdabvi.org</a></p>
+      <p>Mon–Fri, 8:00 AM–4:30 PM</p>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="eye-health.html">Eye Health</a></li>
+        <li><a href="resources.html">Resources for Basic Needs</a></li>
+        <li><a href="https://www.paypal.com/donate/?hosted_button_id=8J7GAGNQ5ZSGS" target="_blank" rel="noopener">Donate</a></li>
+        <li><a href="get-involved.html">Volunteer &amp; Sponsor</a></li>
+        <li><a href="https://www.guidestar.org/profile/38-1683860" target="_blank" rel="noopener">Financial Transparency</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <p>© 2026 GDABVI — All Rights Reserved. A 501(c)(3) Nonprofit · EIN 38-1683860.</p>
+    <p>The information on this site is not to be construed as medical advice. Please consult your eye specialist or health provider regarding your specific condition.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
