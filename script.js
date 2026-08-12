@@ -216,13 +216,12 @@ safe('contact-form', function(){
    Event ends September 17, 2026 at 9:00 PM America/Detroit.
    At that moment Detroit is on EDT (UTC-4), so the absolute
    cutoff is September 18, 2026 at 01:00 UTC.
+   The popup intentionally appears on every page load until then.
    -------------------------------------------------------- */
 safe('topgolf-event-popup', function(){
   var EVENT_END = Date.parse('2026-09-18T01:00:00Z');
-  var SESSION_KEY = 'gdabvi-topgolf-2026-dismissed';
   var now = Date.now();
   if(!EVENT_END || now >= EVENT_END) return;
-  try{ if(window.sessionStorage.getItem(SESSION_KEY)==='1') return; }catch(e){}
 
   var style = document.createElement('style');
   style.id = 'topgolf-popup-styles';
@@ -293,9 +292,8 @@ safe('topgolf-event-popup', function(){
   var closeBtn = overlay.querySelector('.tg-close');
   var previousFocus = document.activeElement;
 
-  function removePopup(markDismissed){
+  function removePopup(){
     if(!overlay.parentNode) return;
-    if(markDismissed){ try{ window.sessionStorage.setItem(SESSION_KEY,'1'); }catch(e){} }
     overlay.setAttribute('aria-hidden','true');
     overlay.parentNode.removeChild(overlay);
     document.body.classList.remove('tg-modal-open');
@@ -303,10 +301,10 @@ safe('topgolf-event-popup', function(){
     if(previousFocus && previousFocus.focus) try{ previousFocus.focus(); }catch(e){}
   }
 
-  closeBtn.addEventListener('click', function(){ removePopup(true); });
-  overlay.addEventListener('click', function(e){ if(e.target===overlay) removePopup(true); });
+  closeBtn.addEventListener('click', removePopup);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) removePopup(); });
   document.addEventListener('keydown', function(e){
-    if(e.key==='Escape' && overlay.parentNode){ e.preventDefault(); removePopup(true); }
+    if(e.key==='Escape' && overlay.parentNode){ e.preventDefault(); removePopup(); }
     if(e.key==='Tab' && overlay.parentNode){
       var focusable = overlay.querySelectorAll('button,a[href]');
       if(!focusable.length) return;
@@ -318,7 +316,7 @@ safe('topgolf-event-popup', function(){
   if(closeBtn) closeBtn.focus(); else if(modal) modal.focus();
 
   var expiryCheck = window.setInterval(function(){
-    if(Date.now() >= EVENT_END){ window.clearInterval(expiryCheck); removePopup(false); }
+    if(Date.now() >= EVENT_END){ window.clearInterval(expiryCheck); removePopup(); }
   }, 60000);
 });
 })();
