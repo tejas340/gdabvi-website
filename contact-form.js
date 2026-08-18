@@ -72,7 +72,7 @@ form.addEventListener('submit', function(event){
   })
   .then(function(){
     form.reset();
-    setStatus('Thank you. Your message has been sent to GDABVI. A staff member will follow up with you.','success');
+    setStatus('Thank you. Your message has been submitted successfully. A GDABVI staff member will follow up with you.','success');
   })
   .catch(function(){
     setStatus('We could not send your message right now. Please call GDABVI at 313-272-3900 for assistance.','error');
