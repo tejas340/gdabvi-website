@@ -75,7 +75,7 @@
             <li><a href="https://www.linkedin.com/company/gdabvi/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
-        <form class="contact" id="contactForm" aria-label="Contact form">
+        <form class="contact" id="contactForm" aria-label="Contact form" action="https://formsubmit.co/information@gdabvi.org" method="POST" aria-describedby="contactFormHelp contactStatus">
           <h2 style="font-size:1.3rem">Send us a message</h2>
           <label for="cf-first">First name</label>
           <input id="cf-first" name="first" type="text" autocomplete="given-name">
@@ -88,7 +88,8 @@
           <label for="cf-msg">How can we help?</label>
           <textarea id="cf-msg" name="message" rows="5"></textarea>
           <button class="btn primary" type="submit">Send Message</button>
-          <p style="font-size:.9rem;margin-top:.8rem;color:var(--brown-soft)">Submitting opens a pre-filled email in your mail app addressed to our office. Prefer to talk? Call <a href="tel:3132723900">313-272-3900</a>.</p>
+          <p id="contactFormHelp" style="font-size:.9rem;margin-top:.8rem">Your message is submitted through this website to the GDABVI office. Your email application will not open. Prefer to talk? Call <a href="tel:3132723900">313-272-3900</a>.</p>
+          <div id="contactStatus" role="status" aria-live="polite" aria-atomic="true" style="margin-top:.8rem;font-weight:700"></div>
         </form>
       </div>
     </div>
@@ -129,6 +130,7 @@
   </div>
 </footer>
 
+<script src="contact-form.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
